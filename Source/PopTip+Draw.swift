@@ -81,11 +81,11 @@ public extension PopTip {
       // 6: Left line
       path.addLine(to: CGPoint(x: borderWidth, y: baloonFrame.minY + radius + borderWidth))
       // 7: Top left arc
-      path.addArc(withCenter: CGPoint(x: baloonFrame.minX + radius + borderWidth, y: baloonFrame.minY + radius), radius:radius, startAngle: CGFloat.pi, endAngle: CGFloat.pi * 1.5, clockwise: true)
+      path.addArc(withCenter: CGPoint(x: baloonFrame.minX + radius + borderWidth, y: baloonFrame.minY + radius + borderWidth / 2), radius:radius, startAngle: CGFloat.pi, endAngle: CGFloat.pi * 1.5, clockwise: true)
       // 8: Top line
-      path.addLine(to: CGPoint(x: baloonFrame.width - radius, y: baloonFrame.minY))
+      path.addLine(to: CGPoint(x: baloonFrame.width - radius, y: baloonFrame.minY + borderWidth / 2))
       // 9: Top right arc
-      path.addArc(withCenter: CGPoint(x: baloonFrame.width - radius, y: baloonFrame.minY + radius), radius:radius, startAngle: CGFloat.pi * 1.5, endAngle: 0, clockwise:true)
+      path.addArc(withCenter: CGPoint(x: baloonFrame.width - radius, y: baloonFrame.minY + radius + borderWidth / 2), radius:radius, startAngle: CGFloat.pi * 1.5, endAngle: 0, clockwise:true)
       // 10: Right line
       path.addLine(to: CGPoint(x: baloonFrame.width, y: baloonFrame.maxY - radius - borderWidth))
       // 11: Bottom right arc
