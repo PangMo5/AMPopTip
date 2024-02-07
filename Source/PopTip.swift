@@ -325,6 +325,7 @@ open class PopTip: UIView {
       }
     }
     frame.origin.x += bubbleOffset
+    arrowPosition.x -= bubbleOffset
     frame.size = CGSize(width: frame.width + borderWidth * 2, height: frame.height + borderWidth * 2)
 
     // Only when the tip is not constrained, make sure to center the frame if the containerView is smaller than the tip
